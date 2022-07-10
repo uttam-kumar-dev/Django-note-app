@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+body {
+    background: rgb(205, 205, 246);
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    background: rgb(53, 18, 248);
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+main {
+    margin-top: 2rem;
+    padding: 0rem 8rem;
+}
+
+.notes-create {
+    width: 12rem;
+    height: 10rem;
+    background-color: #fff;
+    border: 2px dashed rgb(137, 49, 238);
+    border-radius: .9rem;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    margin: 1rem;
+}
+
+.notes-create img {
+    width: 4rem;
+    height: 5rem;
+    margin-top: 2.1rem;
+}
+
+.notes-container {
+    width: 15rem;
+    height: 10rem;
+    background: rgb(242 230 255);
+    border: 1px dashed rgb(0, 0, 251);
+    float: left;
+    margin: 1rem;
+    border-radius: .9rem;
+    padding: 1rem;
+}
+
+.notes-container p {
+    margin-top: 1rem;
+    font-family: fangsong;
+}
+
+.notes-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* styling from */
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input {
+    width: 100%;
+    padding: .6rem;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 2px solid rgb(66, 46, 179);
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    height: 9rem;
+    border: 2px solid rgb(66, 46, 179);
+    padding: .7rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+}
+
+.form-data {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    background: transparent;
+    border: 1px solid blue;
+    outline: none;
+    padding: 0.5rem;
+    width: 9rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(91, 49, 230);
+    transition: all ease-in .4s;
+    color: #fff;
+}
+
+.notes-viewer {
+    background: #efefeff2;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.notes-viewer p {
+    margin-top: 1.5rem;
+}
+
+.notes-viewer h1,
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icon-container {
+    padding: 0.5rem;
+    border: 1px solid #5d2ec7;
+    border-radius: 50px;
+    margin-right: 1rem;
+    background: #e1e1fd;
+    box-shadow: 2px 2px 0px #000;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    background: #fff;
+    box-shadow: none;
+    transition: all ease .5s;
+}
+
+.alert {
+    padding: 0.5rem;
+    background: #f0f1ff;
+    margin-top: 0.5rem;
+}

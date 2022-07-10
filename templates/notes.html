@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %}
+<!-- show title -->
+{% block title %} {{note.note_title}}{% endblock%}
+<!-- end title -->
+
+<!-- showing notes -->
+{% block notes%}
+<div class="notes-viewer">
+    <h1>{{note.note_title|title}}</h1>
+    <p>{{note.note_description}}</p>
+    <div style="display: flex;margin-top: 1.5rem;">
+        <div class="icon-container" onclick="window.location.href='/'" title="Go to home"><img src="{% static '/icons/home-icon.svg' %}" /></div>
+        <div class="icon-container" onclick="window.location.href='/?id={{note.id}}'" title="Edit Note"><img src="{% static '/icons/edit-icon.svg' %}" /></div>
+        <div class="icon-container" onclick="window.location.href='/delete/{{note.id}}'" title="Delete Note"><img src="{% static '/icons/delete-icon.svg' %}" /></div>
+    </div>
+</div>
+{% endblock %}
+<!-- end notes -->

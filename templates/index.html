@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static %} {% block modal %} {% if hellow %}dfsdsdsdsds{% endif %}
+<div id="myModal" class="notes-modal" {% if note %} style="display: block;" {% endif %}>
+    <!-- Modal content -->
+    <div class="modal">
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+        <form {% if note %} action="{% url 'edit-note' note.id %}" {% else %}action="{% url 'create-note' %}" {% endif %} method="post">
+            {% csrf_token %}
+            <div class="form-data">
+                <label for="title">Note Title</label>
+                <input type="text" name="note_title" id="title" {% if note %}value="{{note.note_title}}" {% endif %}>
+            </div>
+
+            <div class="form-data">
+                <label for="description">Note description</label>
+                <textarea name="note_description" id="description">{% if note %}{{note.note_description}}{% endif %}</textarea>
+            </div>
+
+            <button type="submit">{% if note %}Edit {% else %}Create {% endif %}Note</button>
+        </form>
+    </div>
+</div>
+{% if msg %}
+<div class="alert">{{msg}}</div>
+{% endif %} {% endblock %} {% block notes %} {% for note in all_note %}
+<a href="{% url 'notes' note.id%}">
+    <div class="notes-container">
+        <h4 class="notes-title">{{note.note_title}}</h4>
+        <p class="notes-description">{{note.note_description|truncatewords:10}}</p>
+    </div>
+</a>
+{% endfor %}
+<div class="notes-create" title="Create Notes" onclick="create_note()"><img src="{% static '/icons/create-icon.svg'%}" /></div>
+{% endblock %}
